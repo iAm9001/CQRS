@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Frameworks.CQRS")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A basic implementation of the CQRS (Command/Query Responsibility Segregation) design pattern.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("iAm9001")]
 [assembly: AssemblyProduct("Frameworks.CQRS")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
