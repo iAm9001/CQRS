@@ -6,6 +6,17 @@
     /// </summary>
     public interface IQueryProcessor
     {
+        /// <summary>
+        /// The Process method is responsible for executing the appropriate IQueryHandler's Handle method.
+        /// </summary>
+        /// <param name="query">
+        /// The query.
+        /// </param>
+        /// <typeparam name="TResult">
+        /// </typeparam>
+        /// <returns>
+        /// The <see cref="TResult"/>.
+        /// </returns>
         TResult Process<TResult>(IQuery<TResult> query);
     }
 }
