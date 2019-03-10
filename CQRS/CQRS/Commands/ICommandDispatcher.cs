@@ -5,7 +5,7 @@
     /// on the type of the specified <see cref="TCommand"/>.
     /// </summary>
     /// <typeparam name="TCommand" />
-    public interface ICommandDispatcher<TCommand>
+    public interface ICommandDispatcher
     {
         /// <summary>
         /// The Handle method should invoke the Handle method of the appropriate <see cref="ICommandHandler{TCommand}"/> method.
@@ -13,26 +13,21 @@
         /// <param name="command">
         /// The command.
         /// </param>
-        void Handle(TCommand command);
-    }
+        void Handle<TCommand>(TCommand command);
 
-    /// <summary>
-    /// The ICommandDispatcher interface is responsible for locating and calling the Handle method of a the appropriate <see cref="ICommandHandler{TCommand, TResult}"/>, based
-    /// on the type of the specified <see cref="TCommand"/>.  
-    /// </summary>
-    /// <typeparam name="TCommand" />
-    /// <typeparam name="TResult" />
-    public interface ICommandDispatcher<TCommand, TResult>
-    {
         /// <summary>
-        /// The Handle method should invoke the Handle method of the appropriate <see cref="ICommandHandler{TCommand}"/> method.
+        /// The handle.
         /// </summary>
         /// <param name="command">
         /// The command.
         /// </param>
+        /// <typeparam name="TCommand">
+        /// </typeparam>
+        /// <typeparam name="TResult">
+        /// </typeparam>
         /// <returns>
-        /// Returns a result of type <see cref="TResult"/>.
+        /// The <see cref="TResult"/>.
         /// </returns>
-        TResult Handle(TCommand command);
+        TResult Handle<TCommand, TResult>(TCommand command);
     }
 }
