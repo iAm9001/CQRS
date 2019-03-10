@@ -11,7 +11,7 @@
     <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <releaseNotes>First of a basic implementation of CQRS pattern.</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>CQRS Command CommandHandler Query QueryHandler CompositeCommand CompositeCommandHandler CompositeQuery CompositeQueryHandler CommandDispatcher QueryDispatcher CommandQueryResponsibilitySegregation</tags>
   </metadata>
