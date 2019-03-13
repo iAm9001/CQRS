@@ -72,6 +72,13 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard1.3;net40;net45;net46</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.2</Version>
+    <Description>A basic implementation of the CQRS (Command/Query Responsibility Segregation) design pattern.</Description>
+    <PackageLicenseUrl>https://github.com/iAm9001/CQRS/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/iAm9001/CQRS</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/iAm9001/CQRS/master/CQRS/Frameworks.CQRS/Resources/over9000_UZJ_icon.ico</PackageIconUrl>
+    <RepositoryUrl>https://github.com/iAm9001/CQRS</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)'=='net40' OR '$(TargetFramework)'=='net45' OR '$(TargetFramework)'=='net46'">
