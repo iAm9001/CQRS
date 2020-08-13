@@ -17,7 +17,7 @@ namespace Frameworks.CQRS.Commands
         /// <param name="command">
         /// The command.
         /// </param>
-        Task HandleAsync(ICommandAsync command);
+        Task HandleAsync<TCommandAsync>(TCommandAsync command) where TCommandAsync : ICommandAsync;
 
         /// <summary>
         /// The HandleAsync method should invoke the Handle method of the appropriate
@@ -33,6 +33,7 @@ namespace Frameworks.CQRS.Commands
         /// The <see cref="TResult"/>.
         /// </returns>
         /// </summary>
-        Task<TResult> HandleAsync<TResult>(ICommandAsync command);
+        Task<TResult> HandleAsync<TCommandAsync, TResult>(TCommandAsync command)
+            where TCommandAsync : ICommandAsync<TResult>;
     }
 }

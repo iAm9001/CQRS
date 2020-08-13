@@ -7,13 +7,13 @@
     public class CommandDispatcher : ICommandDispatcher
     {
         /// <inheritdoc />
-        public void Handle(ICommand command)
+        public void Handle<TCommand>(TCommand command) where TCommand : ICommand
         {
             throw new System.NotImplementedException();
         }
 
         /// <inheritdoc />
-        public TResult Handle<TResult>(ICommand command)
+        public TResult Handle<TCommand, TResult>(TCommand command) where TCommand : ICommand<TResult>
         {
             throw new System.NotImplementedException();
         }

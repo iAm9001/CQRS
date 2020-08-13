@@ -9,13 +9,14 @@ namespace Frameworks.CQRS.Commands
     public class CommandDispatcherAsync : ICommandDispatcherAsync
     {
         /// <inheritdoc />
-        public Task HandleAsync(ICommandAsync command)
+        public Task HandleAsync<TCommandAsync>(TCommandAsync command) where TCommandAsync : ICommandAsync
         {
             throw new System.NotImplementedException();
         }
 
         /// <inheritdoc />
-        public Task<TResult> HandleAsync<TResult>(ICommandAsync command)
+        public Task<TResult> HandleAsync<TCommandAsync, TResult>(TCommandAsync command)
+            where TCommandAsync : ICommandAsync<TResult>
         {
             throw new System.NotImplementedException();
         }

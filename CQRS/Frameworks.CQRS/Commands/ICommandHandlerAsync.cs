@@ -7,8 +7,7 @@
     /// </summary>
     /// <typeparam name="TCommand"/>
     /// <typeparamref name="TResult"/>
-    /// </typeparam>
-    public interface ICommandHandlerAsync<TCommand, TResult>
+    public interface ICommandHandlerAsync<TCommand, TResult> where TCommand : ICommand<TResult>
     {
         /// <summary>
         /// The HandleAsync method is responsible for processing commands of type <see cref="TCommand"/>.  This method returns a result of type <see cref="TResult"/>.
